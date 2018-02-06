@@ -1,0 +1,10 @@
+[Unit]  
+Description=gost
+After=network.target 
+
+[Service]
+ExecStart=/usr/bin/gost -C /etc/proxy/gost.json
+Restart=on-abort
+
+[Install]  
+WantedBy=multi-user.target
